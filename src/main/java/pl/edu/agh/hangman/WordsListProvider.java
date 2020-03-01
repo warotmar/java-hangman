@@ -7,12 +7,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class WordsListProvider {
-    private final List<String> wordsList = createWordsList();
+    private final List<String> wordsList;
     private Random rd = new Random();
     private String path;
 
-    public WordsListProvider(String path){
+    public WordsListProvider(String path)
+    {
         this.path = path;
+        wordsList = createWordsList();
     }
 
     private List<String> createWordsList(){
