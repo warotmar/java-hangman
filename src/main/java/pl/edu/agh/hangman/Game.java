@@ -3,12 +3,19 @@ package pl.edu.agh.hangman;
 public class Game {
 
     private String wordToFind;
-    private char[] letterFound;
+    private char[] guesses;
 
-    public Game(WordProvider wordProvider){
-        this.wordToFind = wordProvider.getWordToGuess();
+    public Game(WordsListProvider wordsListProvider){
+        
+        guesses = new char[wordToFind.length()];
 
     }
 
-    public void play(){}
+    public char[] getGuesses(){
+        return guesses;
+    }
+
+    public void play(char a){
+
+    }
 }

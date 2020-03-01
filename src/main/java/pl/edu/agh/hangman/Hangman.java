@@ -55,7 +55,10 @@ public class Hangman {
     };
 
     public static void main(String[] args) {
-        WordProvider wordProvider = new WordProvider();
-        System.out.println(wordProvider.getWordToGuess());
+        WordsListProvider wordsListProvider = new WordsListProvider();
+        System.out.println(wordsListProvider.getWordToGuess());
+
+        Game game = new Game(wordsListProvider);
+        System.out.println(game.getGuesses());
     }
 }
